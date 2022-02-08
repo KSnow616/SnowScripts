@@ -5,7 +5,7 @@
 
          res = "group{orientation:'column',\
                          groupOne: Group{orientation:'row',\
-                         AlignButton: Button{text:'Comp Align'},\
+                         AlignButton: Button{text:'Layer Align'},\
                          Info: Button{text:'?'},\
                 },\
           }";
