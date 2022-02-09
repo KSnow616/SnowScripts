@@ -1,23 +1,18 @@
 {
    function myScript(thisObj) {
       function myScript_buildUI(thisObj) {
-         var myPanel = (thisObj instanceof Panel) ? thisObj : new Window("palette", "Dockable Script", undefined, { resizeable: true, closeButton: false });
+         var myPanel = (thisObj instanceof Panel) ? thisObj : new Window("palette", "Dockable Script", undefined, { resizeable: true, closeButton: false }); // init the panel
 
          res = "group{orientation:'column',\
                          groupOne: Group{orientation:'row',\
                          AlignButton: Button{text:'Comp Align'},\
                          Info: Button{text:'?'},\
                 },\
-          }";
+          }"; //Configurate UI
 
          myPanel.grp = myPanel.add(res);
 
-         //Defaults
-
-
-
-
-         myPanel.grp.groupOne.AlignButton.onClick = function () {
+         myPanel.grp.groupOne.AlignButton.onClick = function () { // do the function when clicked (core part)
             try {
                var comp = app.project.activeItem;
                var slLayers = comp.selectedLayers;
@@ -38,14 +33,14 @@
 
          }
 
-         myPanel.grp.groupOne.Info.onClick = function () {
+         myPanel.grp.groupOne.Info.onClick = function () { // Info button
             alert("Align and Trim a layer (or layers) to its beneath layer. v.0.1.0 By KSnow.")
          }
-         myPanel.grp.groupOne.Info.size = [25, 25];
+         myPanel.grp.groupOne.Info.size = [25, 25]; // Contol Size of the info buton
          myPanel.layout.layout(true);
 
          return myPanel;
-      }
+      } // end of myScript_buildUI()
 
 
 
