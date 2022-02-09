@@ -36,7 +36,7 @@
          myPanel.grp.groupOne.Info.onClick = function () { // Info button
             alert("Align and Trim a layer (or layers) to its beneath layer. v.0.1.0 By KSnow.")
          }
-         myPanel.grp.groupOne.Info.size = [25, 25]; // Contol Size of the info buton
+         myPanel.grp.groupOne.Info.size = [25, 25]; // Control the size of the info buton
          myPanel.layout.layout(true);
 
          return myPanel;
